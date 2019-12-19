@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js" style="background-color:black;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="pingback" href="xmlrpc.php">
+    <title>Aleef Travel | Pildrimage Tour</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&amp;subset=latin%2Clatin-ext%2Cdevanagari%2Ccyrillic-ext%2Cvietnamese%2Ccyrillic%2Cgreek-ext%2Cgreek&amp;ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/tourmaster/plugins/elegant-font/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/tourmaster/tourmaster.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/tourmaster-style-custom.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/traveltour-style-custom.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive.css' type='text/css' />
+    <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
+    <style>
+        .bg{
+    background-image: url('images/tour1.jpg');
+    
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .bgm{
+    background-image: url('images/money.jpg');
+
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .bgv{
+    background-image: url('images/f.jpg');
+    
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pop-inner {
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    margin-left: 9%;
+    margin-right: 5%;
+}
+.pop-outer{
+        background-color:rgba(0,0,0,0.5);
+        position:fixed;
+        top:0%;
+        left:0%;
+        width:100%;
+        height:100%;
+        z-index:200;
+        overflow-y: initial;
+   
+    }
+     .logoText
+    {
+    position: absolute;
+    margin-top: -4%;
+    width: 115%;
+    margin-left: -13%;
+    }
+   
+    .tourmaster-tour-grid{
+        cursor:pointer;
+    }
+</style>
+    <script>
+        $(document).ready(function(){
+        
+         $.ajax({
+            url: "\\aleef/form.txt", 
+            success: function(result)
+            {
+                $("#formAjax").html(result);
+            }
+        });
+         $.ajax({
+            url: "\\aleef/formbutton.txt", 
+            success: function(result)
+            {
+                console.log(result);
+                $("#formAjaxbutn").html(result);
+            }
+        });
+        $('.close').click(function(){
+            $('.pop-outer').fadeOut('fast');
+        });
+         $('.wd').click(function(){
+            $('#pop-outer1').fadeIn('fast');
+        });
+        $('.fsd').click(function(){
+            $('#pop-outer2').fadeIn('fast');
+        });
+            });
+</script>
+<script>
+            $(document).ready(function(){
+                $("#eform").on('submit',function(){
+                    var ob =new FormData(this);
+                    $.ajax({
+                        url:"enquiry.php",
+                        type:"post",
+                        data:ob,
+                        contentType: false,
+                        cache: false,           
+                        processData:false,
+                        success:function(datas) 
+                        {   
+                            console.log("dd");
+                            $("#eform")[0].reset();
+                            $(".close").click();
+                            alert("Thanks for your response we'll get back to you soon");
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+</head>
+<div style="display:none;" class="pop-outer" id="pop-outer1">
+    <div class="pop-inner">
+        <button type="submit" class="close" style="margin-top:2%!important;position: absolute;right: 0;left: 85%;">X</button><br><br>
+        <h2 style="text-align:center;">Drop Us a Message</h2><br>
+        <div class="container">
+            <div class="row">
+                <form method="post" id="eform">
+                    <div class="row">
+                        <div class="col-md-4" style="margin-left:10%;">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="margin-left:35%;margin-top:4%;">
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body class="home page-template-default page page-id-2039 gdlr-core-body tourmaster-body woocommerce-no-js traveltour-body traveltour-body-front traveltour-full  traveltour-with-sticky-navigation gdlr-core-link-to-lightbox">
+    <div id="formAjax"></div>
+    <div id="formAjaxbutn"></div>
+    <div class="traveltour-mobile-header-wrap">
+        <div class="traveltour-top-bar">
+            <div class="traveltour-top-bar-background"></div>
+            <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                            <div class="traveltour-top-bar-left traveltour-item-pdlr">
+                                <i class="fa fa-phone" id="i_b45c_2"></i>044-25244179, 42161116
+                                <i class="fa fa-envelope-o" id="i_b45c_3"></i>info@aleeftravel.com
+                            </div>
+                            <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                                <div class="traveltour-top-bar-right-social">
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="flickr">
+                                        <i class="fa fa-flickr"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        <div class="traveltour-mobile-header traveltour-header-background traveltour-style-slide" id="traveltour-mobile-header">
+            <div class="traveltour-mobile-header-container traveltour-container">
+                <div class="traveltour-logo  traveltour-item-pdlr">
+                    <div class="traveltour-logo-inner">
+                        <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+                        <a href="index.html"><img class="logo logoText" src="images/aleefLogoName.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="traveltour-mobile-menu-right">
+                    <!-- <div class="traveltour-main-menu-search" id="traveltour-mobile-top-search"><i class="fa fa-search"></i></div>-->
+                    <div class="traveltour-top-search-wrap">
+                        <div class="traveltour-top-search-close"></div>
+                        <div class="traveltour-top-search-row">
+                            <div class="traveltour-top-search-cell">
+                                <!-- <form role="search" method="get" class="search-form" action="#">
+                                    <input type="text" class="search-field traveltour-title-font" placeholder="Search..." value="" name="s">
+                                    <div class="traveltour-top-search-submit"><i class="fa fa-search"></i></div>
+                                    <input type="submit" class="search-submit" value="Search">
+                                    <div class="traveltour-top-search-close"><i class="icon_close"></i></div>
+                                </form>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traveltour-mobile-menu"><a class="traveltour-mm-menu-button traveltour-mobile-menu-button traveltour-mobile-button-hamburger-with-border" href="#traveltour-mobile-menu"><i class="fa fa-bars"></i></a>
+                        <div class="traveltour-mm-menu-wrap traveltour-navigation-font" id="traveltour-mobile-menu" data-slide="right">
+                            <ul id="menu-main-navigation" class="m-menu">
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="#">Services</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                                <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                                <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                                <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                                <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                                <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                                <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                                <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                                <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="about.html">About us</a></li>
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="contact.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="traveltour-body-outer-wrapper ">
+        <div class="traveltour-body-wrapper clearfix  traveltour-with-transparent-header traveltour-with-frame">
+            <div class="traveltour-header-background-transparent">
+                <div class="traveltour-top-bar">
+                    <div class="traveltour-top-bar-background"></div>
+                    <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                            <div class="traveltour-top-bar-left traveltour-item-pdlr">
+                                <i class="fa fa-phone" id="i_b45c_2"></i>044-25244179, 42161116
+                                <i class="fa fa-envelope-o" id="i_b45c_3"></i>info@aleeftravel.com
+                            </div>
+                            <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                                <div class="traveltour-top-bar-right-social">
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="flickr">
+                                        <i class="fa fa-flickr"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <header class="traveltour-header-wrap traveltour-header-style-plain  traveltour-style-menu-right traveltour-sticky-navigation traveltour-style-slide">
+                    <div class="traveltour-header-background"></div>
+                    <div class="traveltour-header-container  traveltour-container">
+                        <div class="traveltour-header-container-inner clearfix">
+                            <div class="traveltour-logo  traveltour-item-pdlr">
+                                <div class="traveltour-logo-inner">
+                                    <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+                                    <a href="index.html"><img class="logo logoText" src="images/aleefLogoName.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="traveltour-navigation traveltour-item-pdlr clearfix ">
+                                <div class="traveltour-main-menu" id="traveltour-main-menu">
+                                    <ul id="menu-main-navigation-1" class="sf-menu">
+                                        <li class="menu-item menu-item-home current-menu-item menu-item-has-children traveltour-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
+                                        <li class="menu-item traveltour-normal-menu"><a href="#" class="sf-with-ul-pre">Services</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                                <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                                <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                                <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                                <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                                <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                                <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                                <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                                <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item traveltour-normal-menu"><a href="about.html">About us</a></li>
+                                        <li class="menu-item traveltour-normal-menu"><a href="contact.html">Contact us</a></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                    <div class="traveltour-navigation-slide-bar" id="traveltour-navigation-slide-bar"></div>
+                                </div>
+                                <div class="traveltour-main-menu-right-wrap clearfix ">
+                                    <!--<div class="traveltour-main-menu-search" id="traveltour-top-search"><i class="fa fa-search"></i></div>-->
+                                    <div class="traveltour-top-search-wrap">
+                                        <!--<div class="traveltour-top-search-close"></div>-->
+                                        <div class="traveltour-top-search-row">
+                                            <!--<div class="traveltour-top-search-cell">
+                                                <form role="search" method="get" class="search-form" action="#">
+                                                    <input type="text" class="search-field traveltour-title-font" placeholder="Search..." value="" name="s">
+                                                    <div class="traveltour-top-search-submit"><i class="fa fa-search"></i></div>
+                                                    <input type="submit" class="search-submit" value="Search">
+                                                    <div class="traveltour-top-search-close"><i class="icon_close"></i></div>
+                                                </form> 
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="container-fluid bg bg1">
+                <div class="row ">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:black;">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="padding:20%;">
+                        <div class="container" style="">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="word-spacing:5px; ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="traveltour-page-wrapper" id="traveltour-page-wrapper">
+                <div class="gdlr-core-page-builder-body">
+                    <div class="gdlr-core-pbf-section">
+                        <div class="gdlr-core-pbf-section-container gdlr-core-container clearfix">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-tour-item-column-2">
+                                    <h1 class="traveltour-page-title">PILGRIMAGE TOUR</h1>
+                                    <div class="tourmaster-tour-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd ">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image ">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/CHARDHAM YATRA.jpg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_0"><a>CHARDHAM YATRA</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/AMARNATH YATRA.jpg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_1"><a>AMARNATH YATRA</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/BADRINATH DHAM YATRA.jpg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_2"><a>BADRINATH DHAM YATRA</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/KEDARNATH DHAM YATRA.jpeg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_3"><a>KEDARNATH DHAM YATRA</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/ISLAMIC PILGRIMAGE YATRA.jpg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_4"><a>ISLAMIC PILGRIMAGE YATRA</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-item-list  tourmaster-item-pdlr tourmaster-column-20 wd">
+                                            <div class="tourmaster-tour-grid  tourmaster-price-right-title">
+                                                <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                    <a><img src="images/PILGRIMAGE_TOUR/SIKHISM TOUR.jpg" alt="" width="700" style="height:200px!important;" /></a>
+                                                </div>
+                                                <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                    <h3 class="tourmaster-tour-title gdlr-core-skin-title" id="h3_3ea1_5"><a>SIKHISM TOUR
+                                                        </a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GOVERNMENT RECOGINITIONS -->
+    <!-- <div style="padding-bottom:30px; background-color:white">
+        <div style="text-align: center;font-size: 50px;color: rgb(0, 117, 193);font-family: myriad pro;padding-top:30px;padding-bottom: 30px;">
+            <P>Government Recognitions</P>
+        </div>
+        <div style="width:15%;margin-left:17%;">
+            <img src="images/incredibleIndia.png" alt="IATA logo">
+        </div>
+        <div style="width: 13%;position: absolute;margin-top: -8%;margin-left: 42%;">
+            <img src="images/enchantingTamilnadu.jpg" alt="TAAI logo">
+        </div>
+        <div style="position: absolute;margin-top: -8%;margin-left: 69%;">
+            <img src="images/singporeAuthorize.webp" alt="TAFI logo">
+        </div>
+    </div> -->
+    <!--- OUR ACTIVE ACCREDITATIONS -->
+   <!--- <div style="padding-bottom:30px; background-color:white">
+        <div style="text-align: center;font-size: 50px;color: rgb(0, 117, 193);font-family: myriad pro;padding-top:30px;">
+            <P>Our Active Accreditations</P>
+        </div>
+        <div style="width:15%;margin-left:17%;">
+            <img src="images/iata.gif" alt="IATA logo">
+        </div>
+        <div style="width: 21%;position: absolute;margin-top: -14%;margin-left: 39%;">
+            <img src="images/taai.jpg" alt="TAAI logo">
+        </div>
+        <div style="width: 29%;position: absolute;margin-top: -18%;margin-left: 59%;">
+            <img src="images/tafi.png" alt="TAFI logo">
+        </div>
+    </div> -->
+<footer>
+        <div class="traveltour-footer-wrapper  traveltour-with-column-divider">
+            <div class="traveltour-footer-container traveltour-container clearfix">
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Government Recognitions </span></h3><span class="clear"></span>
+                    <div id="text-1" class="widget widget_text traveltour-widget">
+                        <div class="textwidget" >
+                            <img src="images/Untitled-3-01.jpg" alt="" width="100%" style="padding:10px;"/><br>
+                            <img src="images/enchantingTamilnadu.jpg" alt="" width="45%" style="padding:10px;"/>
+                            <img src="images/singporeAuthorize.webp" alt="" width="32%" style="padding:10px;"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Our Active Accreditations</span></h3><span class="clear"></span>
+                    <div id="tourmaster-widget-tour-category-6" class="widget widget_tourmaster-widget-tour-category traveltour-widget" style="display:flex;justify-content:left;flex-wrap: wrap;">
+                        
+                        <img src="images/iata.gif" alt="" width="600" height="600" style="padding:10px;width: 100px;"/>
+                        <img src="images/taai.jpg"  width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                        <img src="http://tafionline.com/Image/Logo.gif" width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                                
+                           <!--  </div> -->
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <div id="text-2" class="widget widget_text traveltour-widget">
+                        <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Contact Info</span></h3><span class="clear"></span>
+                        <div class="textwidget">
+                            <p>Address : #76(New #157),
+                                <br/> Angappa Naicken street,
+                                <br/> (Opp.to Hotel Gem Palace)Mannady,
+                                <br/>Chennai-600 001.</p>
+                            <p>
+                                <span class="gdlr-core-space-shortcode" id="span_29f0_17"></span>
+                                <br/>
+                                <a href="#"><i class="fa fa-facebook" id="i_29f0_9"></i></a> 
+                                <a href="#"><i class="fa fa-flickr" id="i_29f0_9"></i></a>
+                                <a href="#"><i class="fa fa-twitter" id="i_29f0_10"></i></a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="traveltour-copyright-wrapper">
+        <div class="traveltour-copyright-container traveltour-container" style="display:flex!important;justify-content:center!important;">
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important ">Copyrights &copy;<a href="http://www.aleeftravel.com/"> Aleef travel</a> 2019</div>
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important">Designed and Developed by<a href="https://vinteksolution.com/"> Vintek Solution</a></div>
+        </div>
+    </div><a href="#traveltour-top-anchor" class="traveltour-footer-back-to-top-button" id="traveltour-footer-back-to-top-button"><i class="fa fa-angle-up"></i></a>
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/core.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <script type='text/javascript' src='plugins/tourmaster/tourmaster.js'></script>
+    <script type='text/javascript' src='js/plugins.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    <!-- Rev SLider Plugin -->
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    function setREVStartSize(e) {
+        try {
+            e.c = jQuery(e.c);
+            var i = jQuery(window).width(),
+                t = 9999,
+                r = 0,
+                n = 0,
+                l = 0,
+                f = 0,
+                s = 0,
+                h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                    f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                var u = (e.c.width(), jQuery(window).height());
+                if (void 0 != e.fullScreenOffsetContainer) {
+                    var c = e.fullScreenOffsetContainer.split(",");
+                    if (c) jQuery.each(c, function(e, i) {
+                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                }
+                f = u
+            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({
+                height: f
+            })
+        } catch (d) {
+            console.log("Failure at Presize of Slider:" + d)
+        }
+    }; /*]]>*/
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    function revslider_showDoubleJqueryError(sliderID) {
+        var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+        errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+        errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+        errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+        errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+        jQuery(sliderID).show().html(errorMessage);
+    } /*]]>*/
+    </script>
+    <script>
+    /*<![CDATA[*/
+    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+    var htmlDivCss = "";
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (setREVStartSize !== undefined) setREVStartSize({
+        c: '#rev_slider_1_1',
+        gridwidth: [1280],
+        gridheight: [680],
+        sliderLayout: 'auto'
+    });
+    var revapi1, tpj;
+    (function() {
+        if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+        else onLoad();
+
+        function onLoad() {
+            if (tpj === undefined) {
+                tpj = jQuery;
+                if ("off" == "on") tpj.noConflict();
+            }
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "//demo.goodlayers.com/travelwp-content/plugins/revslider/public/assets/js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            touchOnDesktop: "off",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 1024,
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 50
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 50
+                            }
+                        },
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: false,
+                            style: "uranus",
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 5,
+                            v_offset: 25,
+                            space: 10,
+                            tmp: '<span class="tp-bullet-inner"></span>'
+                        }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1280,
+                    gridheight: 680,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "off",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            };
+        };
+    }()); /*]]>*/
+    </script>
+    <script>
+    /*<![CDATA[*/
+    var htmlDivCss = unescape("%23rev_slider_1_1%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_1_1%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_1_1%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
+    var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement('div');
+        htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+        document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+    </script>
+</body>
+
+</html>

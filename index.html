@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="pingback" href="xmlrpc.php">
+        <title>Aleef Travel | Home</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&amp;subset=latin%2Clatin-ext%2Cdevanagari%2Ccyrillic-ext%2Cvietnamese%2Ccyrillic%2Cgreek-ext%2Cgreek&amp;ver=4.9.8' type='text/css' media='all' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='plugins/tourmaster/plugins/elegant-font/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='plugins/tourmaster/tourmaster.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/tourmaster-style-custom.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/traveltour-style-custom.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/responsive.css' type='text/css' />
+        <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/flickity@2.2.1/dist/flickity.css"/>
+    
+        <style>
+            .bg{
+                background-image: url('images/tour1.jpg');
+                height: 100%;
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .pop-inner {
+                background-color: white;
+                width: 80%;
+                height: 70%;
+                margin-top: 7%;
+                margin-bottom: 5%;
+                margin-left: 9%;
+                margin-right: 5%;
+            }
+            .pop-outer{
+                background-color:rgba(0,0,0,0.5);
+                position:fixed;
+                top:0%;
+                left:0%;
+                width:100%;
+                height:100%;
+                z-index:200;
+                overflow-y: initial;
+            }
+            .logoText{
+                position: absolute;
+                margin-top: -4%;
+                width: 115%;
+                margin-left: -13%;
+            }
+            .featuresDiv{
+                display: flex;
+                flex-direction: row;
+                padding-top: 3%;
+                padding-left: 5%;
+                background-color: #487FE6;
+            }
+            .flightDiv{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: center;
+            }
+            .flightImg{
+                width: 8%;
+            }
+            @media only screen and (max-width: 768px){
+                .featuresDiv{
+                    flex-direction: column;
+                    padding-left: 23%;
+                }
+                .flightDiv{
+                    display: flex;
+                    flex-direction:column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .flightImg{
+                    width: 40%;
+                }
+            }
+            .tourmaster-tour-grid{
+                cursor:pointer;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#eform").on('submit',function(){
+                    var ob =new FormData(this);
+                    $.ajax({
+                        url:"enquiry.php",
+                        type:"post",
+                        data:ob,
+                        contentType: false,
+                        cache: false,           
+                        processData:false,
+                        success:function(datas) 
+                        {   
+                            console.log("dd");
+                            $("#eform")[0].reset();
+                            $(".close").click();
+                            alert("Thanks for your response we'll get back to you soon");
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    
+    
+    <div style="display:none;" class="pop-outer" id="pop-outer1">
+    <div class="pop-inner">
+        <button type="submit" class="close" style="margin-top:2%!important;position: absolute;right: 0;left: 85%;">X</button><br><br>
+        <h2 style="text-align:center;">Drop Us a Message</h2><br>
+        <div class="container">
+            <div class="row">
+                <form method="post" id="eform">
+                    <div class="row">
+                        <div class="col-md-4" style="margin-left:10%;">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="margin-left:35%;margin-top:4%;">
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    <body class="home page-template-default page page-id-2039 gdlr-core-body tourmaster-body woocommerce-no-js traveltour-body traveltour-body-front traveltour-full  traveltour-with-sticky-navigation gdlr-core-link-to-lightbox">
+         <div class="traveltour-mobile-header-wrap">
+            <div class="traveltour-top-bar">
+                <div class="traveltour-top-bar-background"></div>
+                <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                    <div class="traveltour-top-bar-left traveltour-item-pdlr travel-tour-hide-on-mobile">
+                        <i class="fa fa-phone" id="i_b45c_0"></i> 044-25244179, 42161116
+                        <i class="fa fa-envelope-o" id="i_b45c_1"></i>info@aleeftravel.com
+                    </div>
+                    <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                        <div class="traveltour-top-bar-right-social">
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="facebook">
+                                <i class="fa fa-facebook" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="flickr">
+                                <i class="fa fa-flickr" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="google-plus">
+                                <i class="fa fa-google-plus" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="twitter">
+                                <i class="fa fa-twitter" ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="traveltour-mobile-header traveltour-header-background traveltour-style-slide" id="traveltour-mobile-header">
+                <div class="traveltour-mobile-header-container traveltour-container">
+                   <div class="traveltour-logo  traveltour-item-pdlr">
+                        <div class="traveltour-logo-inner">
+                            <a href="index.html"><img src="images/logo.png"  class="logo"  alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="traveltour-mobile-menu-right">
+                        <div class="traveltour-top-search-wrap">
+                            <div class="traveltour-top-search-close"></div>
+                            <div class="traveltour-top-search-row">
+                            <div class="traveltour-top-search-cell">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="traveltour-mobile-menu"><a class="traveltour-mm-menu-button traveltour-mobile-menu-button traveltour-mobile-button-hamburger-with-border" href="#traveltour-mobile-menu"><i class="fa fa-bars" ></i></a>
+                            <div class="traveltour-mm-menu-wrap traveltour-navigation-font" id="traveltour-mobile-menu" data-slide="right">
+                                <ul id="menu-main-navigation" class="m-menu">
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="index.html">Home</a></li>
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="#">Services</a>
+                                     <ul class="sub-menu">
+                                         <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                        <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                        <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                        <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                        <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                        <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                        <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                        <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                        <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="about.html">About us</a></li>
+                                    
+                                    <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="traveltour-body-outer-wrapper ">
+            <div class="traveltour-body-wrapper clearfix  traveltour-with-transparent-header traveltour-with-frame">
+                <div class="traveltour-header-background-transparent">
+                    <div class="traveltour-top-bar">
+                        <div class="traveltour-top-bar-background"></div>
+                        <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                            <div class="traveltour-top-bar-left traveltour-item-pdlr">
+                                <i class="fa fa-phone" id="i_b45c_2"></i>044-25244179, 42161116
+                                <i class="fa fa-envelope-o" id="i_b45c_3"></i>info@aleeftravel.com
+                            </div>
+                            <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                                <div class="traveltour-top-bar-right-social">
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="flickr">
+                                        <i class="fa fa-flickr"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="traveltour-top-bar-social-icon" title="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <header class="traveltour-header-wrap traveltour-header-style-plain  traveltour-style-menu-right traveltour-sticky-navigation traveltour-style-slide">
+                    <div class="traveltour-header-background"></div>
+                    <div class="traveltour-header-container  traveltour-container">
+                        <div class="traveltour-header-container-inner clearfix">
+                            <div class="traveltour-logo  traveltour-item-pdlr">
+                                <div class="traveltour-logo-inner">
+                                    <a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
+                                    <a href="index.html"><img class="logo logoText" src="images/aleefLogoName.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="traveltour-navigation traveltour-item-pdlr clearfix ">
+                                <div class="traveltour-main-menu" id="traveltour-main-menu">
+                                    <ul id="menu-main-navigation-1" class="sf-menu">
+                                        <li class="menu-item menu-item-home current-menu-item menu-item-has-children traveltour-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a></li>
+                                        <li class="menu-item traveltour-normal-menu"><a href="#" class="sf-with-ul-pre">Services</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                                <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                                <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                                <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                                <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                                <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                                <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                                <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                                <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item traveltour-normal-menu"><a href="about.html">About us</a></li>
+                                        <li class="menu-item traveltour-normal-menu"><a href="contact.html">Contact us</a></li>
+                                    </ul>
+                                    <div class="traveltour-navigation-slide-bar" id="traveltour-navigation-slide-bar"></div>
+                                </div>
+                                <div class="traveltour-main-menu-right-wrap clearfix ">
+                                    <div class="traveltour-top-search-wrap">
+                                        <div class="traveltour-top-search-row">
+                                            <div class="traveltour-top-search-cell">
+                                                <form role="search" method="get" class="search-form" action="contact.html">
+                                                    <input type="text" class="search-field traveltour-title-font" placeholder="Search..." value="" name="s">
+                                                    <div class="traveltour-top-search-submit"><i class="fa fa-search"></i></div>
+                                                    <input type="submit" class="search-submit" value="Search">
+                                                    <div class="traveltour-top-search-close"><i class="icon_close"></i></div>
+                                                </form> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <!--<div class="gallery" data-flickity='{ "freeScroll": true,}'>
+                  <div><img src="upload/slider-1.jpg" ></div>
+                  <div><img src="upload/slider-1.jpg" ></div>
+                  <div><img src="upload/slider-1.jpg" ></div>
+            </div>-->
+            <div class="traveltour-page-wrapper" id="traveltour-page-wrapper">
+                <div class="gdlr-core-page-builder-body">
+                    <div class="gdlr-core-pbf-wrapper " id="div_eeca_0">
+                        <div class="gdlr-core-pbf-background-wrap" id="div_eeca_1"></div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb " id="div_eeca_2">
+                                        <link href="https://fonts.googleapis.com/css?family=Roboto:900%2C700" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+                                        <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery">
+                                            <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8">
+                                                <ul>
+                                                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="upload/slider-1-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="upload/slider-1.jpg" alt="" title="slider-1" width="1800" height="844" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                         <div style="width:200px;height:150;z-index:5;">
+                                                           <!-- <img src="logos/l3.png" style="margin-top:280px!important;margin-bottom:-50px!important;height:150px!important;width:200px!important;"/>-->
+                                                        </div>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="89" data-y="center" data-voffset="10" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","speed":2000,"to":"o:1;","delay":450,"ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 81px; font-weight: 600; color: rgba(255,255,255,1);font-family:Poppins;">Aleef Travel <br>Pvt Ltd</div>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-2" data-x="90" data-y="center" data-voffset="92" data-width="200" data-height="150" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":690,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 45px; font-weight: 600; color: rgba(186,217,255,1);font-family:Poppins;"></div>
+                                                       
+                                                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-3" data-x="92" data-y="center" data-voffset="138" data-width="['auto']" data-height="['auto']" data-visibility="['on','on','on','off']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":880,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 18px; font-weight: 400; color: rgba(218,229,255,1);font-family:Poppins;"></div>
+                                                        <div class="tp-caption rev-btn  tp-resizeme" id="slide-1-layer-4" data-x="94" data-y="center" data-voffset="200" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1060,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="z-index: 8; white-space: nowrap; font-size: 13px; line-height: 12px; font-weight: 900; color: rgba(255,255,255,1);font-family:Roboto;text-transform:uppercase;background-color:rgba(70,146,231,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="#div_29f0_16" style="color:white;">Learn More</a></div>
+                                                    </li>
+                                                    <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="upload/slider-2-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="upload/slider-2.jpg" alt="" title="slider-2" width="1800" height="844" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina >
+                                                        <div class="tp-caption   tp-resizeme" id="slide-2-layer-2" data-x="89" data-y="center" data-voffset="-17" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[10,10,10,10]" style="z-index: 9; white-space: nowrap; font-size: 37px; font-weight: 500; color: rgba(186,217,255,1);font-family:Poppins;background-color:rgba(0,0,0,0.5);">Specialities</div>
+                                                        <!--<div class="tp-caption   tp-resizeme" id="slide-2-layer-1" data-x="89" data-y="center" data-voffset="62" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":780,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; white-space: nowrap; font-size: 90px; font-weight: 700; color: rgba(255,255,255,1);font-family:Poppins;text-transform:uppercase;">Vacation</div>-->
+                                                        <div class="tp-caption   tp-resizeme" id="slide-2-layer-3" data-x="89" data-y="center" data-voffset="137" data-width="['auto']" data-height="['auto']" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1010,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[10,10,10,10]" style="z-index: 11; white-space: nowrap; font-size: 18px; font-weight: 400; color: rgba(218,229,255,1);font-family:Poppins;background-color:rgba(0,0,0,0.5);">International and Domestic Holidays, Cruise, Honeymoon, <br> Group tours corporate meeting, Exhibition, Pilgrimage package, <br> Top agent for major airlines, Visa - Authoized Visa agent for major country, Money change - RBI Authorized</div>
+                                                        <!--<div class="tp-caption rev-btn  tp-resizeme" id="slide-2-layer-4" data-x="89" data-y="center" data-voffset="203" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1160,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="z-index: 12; white-space: nowrap; font-size: 13px; line-height: 12px; font-weight: 900; color: rgba(255,255,255,1);font-family:Roboto;text-transform:uppercase;background-color:rgba(70,146,231,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="tour.html" style="color:white;">Learn More</a></div>-->
+                                                    </li>
+                                                    <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="upload/slider-3-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="upload/slider-3.jpg" alt="" title="slider-3" width="1800" height="844" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                        <div class="tp-caption   tp-resizeme" id="slide-3-layer-2" data-x="89" data-y="center" data-voffset="-13" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[10,10,10,10]" data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[10,10,10,10]" style="z-index: 13; white-space: nowrap; font-size: 37px; font-weight: 400; color: rgba(255,255,255,1);font-family:Poppins;text-transform:uppercase;letter-spacing:2px;background-color:rgba(0,0,0,0.5);">Our Accreditation and Recognition</div>
+                                                       <!-- <div class="tp-caption   tp-resizeme" id="slide-3-layer-1" data-x="89" data-y="center" data-voffset="66" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;","speed":1500,"to":"o:1;","delay":780,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 14; white-space: nowrap; font-size: 73px; font-weight: 700; color: rgba(255,255,255,1);font-family:Poppins;">The Hidden World</div>-->
+                                                       <div class="tp-caption   tp-resizeme" id="slide-2-layer-3" data-x="89" data-y="center" data-voffset="137" data-width="['auto']" data-height="['auto']" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1010,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[10,10,10,10]" style="z-index: 11; white-space: nowrap; font-size: 18px; font-weight: 400; color: rgba(218,229,255,1);font-family:Poppins;background-color:rgba(0,0,0,0.5);">IATA - International Air Transport Association,<br>MOT - Ministry of Tourism Goverment of India ,<br> Singapore Consulate - authorized visa agent Singapore,<br>Malaysia Consulate - authorized visa agent Malaysia,<br>TAAI - Travel Agents Association of India,<br>TAFI - Travel Agents Federation of India</div>
+                                                        <!--<div class="tp-caption rev-btn  tp-resizeme" id="slide-3<link-layer-4" data-x="89" data-y="center" data-voffset="158" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1030,"ease":"Power2.easeInOut"},{"delay":"wait","speed":170,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="z-index: 15; white-space: nowrap; font-size: 13px; line-height: 12px; font-weight: 700; color: rgba(48,30,30,1);font-family:Roboto;text-transform:uppercase;background-color:rgba(255,255,255,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing:1px;cursor:pointer;"><a href="tour.html">Learn More</a></div>-->
+                                                    </li>
+                                                </ul>
+                                                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="div_29f0_16" data-skin="Homepage Search">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_17" data-parallax-speed="0"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " >
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" >
+                            <div class="gdlr-core-pbf-element" >
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" id="gdlr-core-title-item-id-88464" style="background-image:rgba(0,0,0,0.5);">
+                                    <div class="gdlr-core-title-item-title-wrap">
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_0">Popular International Tour Destinations<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element ">
+                                <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-item-pdlr tourmaster-tour-item-column-3" id="div_29f0_18">
+                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 tourmaster-nav-style-rect" data-type="carousel" data-column="3" data-nav="navigation" data-nav-parent="tourmaster-tour-item" data-vcenter-nav="1">
+                                        <ul class="slides">
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/International_Tour_Destinations/dubai.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Dubai</h3>
+                                                        <!--<div class="tourmaster-tour-price-wrap "><span class="tourmaster-tour-price"><span class="tourmaster-head">From</span><span class="tourmaster-tail">$100</span></span>
+                                                            </div>-->
+                                                        <!--<div class="tourmaster-tour-info-wrap clearfix">
+                                                                <div class="tourmaster-tour-info tourmaster-tour-info-duration-text "><i class="icon_clock_alt"></i>5 Hours</div>
+                                                            </div>-->
+                                                        <!-- <div class="tourmaster-tour-info-wrap clearfix">
+                                                            <div class="tourmaster-tour-info tourmaster-tour-info-duration-text "><i class="icon_clock_alt"></i>14 days</div>
+                                                        </div>
+                                                        <div class="tourmaster-tour-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="tourmaster-tour-rating-text"></span></div> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/International_Tour_Destinations/europe.jpg" alt="" width="700"  style="height:200px!important;"/> </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Europe</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/International_Tour_Destinations/turkey.jpg" alt="" width="700"  style="height:200px!important;"/>
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Turkey</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/International_Tour_Destinations/Maldives.jpg" alt="" width="700" style="height:200px!important;"/>
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Maldives</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/International_Tour_Destinations/bali.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Bali</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element" style="display: flex;justify-content: center;">
+                                <div class="tp-caption rev-btn  tp-resizeme" id="slide-1-layer-4" data-x="94" data-y="center" data-voffset="200" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1060,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="    z-index: 8;margin-top: 5%;white-space: nowrap;font-size: 13px;line-height: 12px;font-weight: 900;color: rgba(255,255,255,1);font-family: Roboto;text-transform: uppercase;background-color: rgba(70,146,231,1);border-radius: 3px 3px 3px 3px;outline: none;text-align: center;width: fit-content;box-shadow: none;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;cursor: pointer;"><a href="international.html" style="color:white;text-decoration: none;">View all International Destinations</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="div_29f0_16" data-skin="Homepage Search" >
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_17" data-parallax-speed="0" style="background-image:url('upload/search-bg2.jpg')!important"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" id="gdlr-core-title-item-id-88464">
+                                    <div class="gdlr-core-title-item-title-wrap">
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_0">Popular Domestic Tour Destinations<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element ">
+                                <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-item-pdlr tourmaster-tour-item-column-3" id="div_29f0_18">
+                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 tourmaster-nav-style-rect" data-type="carousel" data-column="3" data-nav="navigation" data-nav-parent="tourmaster-tour-item" data-vcenter-nav="1">
+                                        <ul class="slides">
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Domestic_Tour_Destinations/kashmir.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Srinagar, Kashmir</h3>
+                                                        <!--<div class="tourmaster-tour-price-wrap "><span class="tourmaster-tour-price"><span class="tourmaster-head">From</span><span class="tourmaster-tail">$100</span></span>
+                                                            </div>-->
+                                                        <!--<div class="tourmaster-tour-info-wrap clearfix">
+                                                                <div class="tourmaster-tour-info tourmaster-tour-info-duration-text "><i class="icon_clock_alt"></i>5 Hours</div>
+                                                            </div>-->
+                                                        <!-- <div class="tourmaster-tour-info-wrap clearfix">
+                                                            <div class="tourmaster-tour-info tourmaster-tour-info-duration-text "><i class="icon_clock_alt"></i>14 days</div>
+                                                        </div>
+                                                        <div class="tourmaster-tour-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="tourmaster-tour-rating-text"></span></div> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Domestic_Tour_Destinations/simla.jpg" alt="" width="700" style="height:200px!important;" /> </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Shimla, Himachal Pradesh
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Domestic_Tour_Destinations/uttarakhand.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Nainital, Uttarakhand</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Domestic_Tour_Destinations/darjeeling.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Darjeeling, West Bengal</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Domestic_Tour_Destinations/coorg.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Coorg, Karnataka</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element" style="display: flex;justify-content: center;">
+                                <div class="tp-caption rev-btn  tp-resizeme" id="slide-1-layer-4" data-x="94" data-y="center" data-voffset="200" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1060,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="    z-index: 8;margin-top: 5%;white-space: nowrap;font-size: 13px;line-height: 12px;font-weight: 900;color: rgba(255,255,255,1);font-family: Roboto;text-transform: uppercase;background-color: rgba(70,146,231,1);border-radius: 3px 3px 3px 3px;outline: none;text-align: center;width: fit-content;box-shadow: none;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;cursor: pointer;"><a href="domestic.html" style="color:white;text-decoration: none;">View all Domestic Destinations</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="gdlr-core-pbf-wrapper " id="div_29f0_16" data-skin="Homepage Search">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_17" data-parallax-speed="0"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" id="gdlr-core-title-item-id-88464">
+                                    <div class="gdlr-core-title-item-title-wrap">
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_0">Popular Pilgrimage Destinations <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element ">
+                                <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-item-pdlr tourmaster-tour-item-column-3" id="div_29f0_18">
+                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 tourmaster-nav-style-rect" data-type="carousel" data-column="3" data-nav="navigation" data-nav-parent="tourmaster-tour-item" data-vcenter-nav="1">
+                                        <ul class="slides">
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Popular_Pilgrimage_Destination/Sikhism.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Best of Sikhism tour</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Popular_Pilgrimage_Destination/Jain Pilgrimage tour.jpg" alt="" width="700" style="height:200px!important;"/> </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Jain Pilgrimage tour
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Popular_Pilgrimage_Destination/Chardham Pilgrimage tour.jpg" alt="" width="700" style="height:200px!important;"/>
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Chardham Pilgrimage tour</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/Popular_Pilgrimage_Destination/Islamic Pilgrimage Tour.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Islamic Pilgrimage Tour</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/royal 1.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Buddhist Circuit Tour</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element" style="display: flex;justify-content: center;">
+                                <div class="tp-caption rev-btn  tp-resizeme" id="slide-1-layer-4" data-x="94" data-y="center" data-voffset="200" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1060,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="    z-index: 8;margin-top: 5%;white-space: nowrap;font-size: 13px;line-height: 12px;font-weight: 900;color: rgba(255,255,255,1);font-family: Roboto;text-transform: uppercase;background-color: rgba(70,146,231,1);border-radius: 3px 3px 3px 3px;outline: none;text-align: center;width: fit-content;box-shadow: none;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;cursor: pointer;"><a href="pilgrimage.html" style="color:white;text-decoration: none;">View all Pilgrimage Destinations</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featuresDiv">
+                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_2">
+                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-1.png" alt="" width="49" height="49" /></div>
+                        <div class="gdlr-core-column-service-content-wrapper">
+                            <div class="gdlr-core-column-service-title-wrap" id="div_29f0_3">
+                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">500+ Destinations</h3>
+                            </div>
+                            <div class="gdlr-core-column-service-content" id="div_29f0_4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_5">
+                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-2.png" alt="" width="41" height="49" /></div>
+                        <div class="gdlr-core-column-service-content-wrapper">
+                            <div class="gdlr-core-column-service-title-wrap" id="div_29f0_6">
+                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Best Price Guarantee</h3>
+                            </div>
+                            <div class="gdlr-core-column-service-content" id="div_29f0_7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_8">
+                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-3.png" alt="" width="30" height="39" /></div>
+                        <div class="gdlr-core-column-service-content-wrapper">
+                            <div class="gdlr-core-column-service-title-wrap" id="div_29f0_9">
+                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Great Customer</h3>
+                            </div>
+                            <div class="gdlr-core-column-service-content" id="div_29f0_10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_11">
+                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-4.png" alt="" width="35" height="38" /></div>
+                        <div class="gdlr-core-column-service-content-wrapper">
+                            <div class="gdlr-core-column-service-title-wrap" id="div_29f0_12">
+                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Your Trusted<br> Advisor </h3>
+                            </div>
+                            <div class="gdlr-core-column-service-content" id="div_29f0_13">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_11">
+                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-4.png" alt="" width="35" height="38" /></div>
+                        <div class="gdlr-core-column-service-content-wrapper">
+                            <div class="gdlr-core-column-service-title-wrap" id="div_29f0_12">
+                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Create Happy<br> Memories</h3>
+                            </div>
+                            <div class="gdlr-core-column-service-content" id="div_29f0_13">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:17px;">
+                    <h3 style="text-align: center;">Flight</h3>
+                    <div class="flightDiv">
+                        <img src="images/iata.gif" class="flightImg" alt="IATA logo">
+                        <p style="font-size: 17px;text-align:center;"> IATA Authorised Agent to issue international and domestic tickets directly.<br>We are happy to inform being the top agent and award-winning in air tickets sales for the past 10 years</p>
+                    </div>
+                    <div style="display: flex;justify-content: center;font-size: 17px;">
+                       <!-- <a href="">For planning your best feasible routings at the best pricing call.</a>-->
+                        <a href="">Plan feasible routes at best selling price</a>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="div_29f0_16" data-skin="Homepage Search">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_17" data-parallax-speed="0" style="background-image:url('images/Home/top_Cruises/bg.jpg')!important"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" id="gdlr-core-title-item-id-88464">
+                                    <div class="gdlr-core-title-item-title-wrap">
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_0">Best Cruise Package<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element ">
+                                <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-item-pdlr tourmaster-tour-item-column-3" id="div_29f0_18">
+                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 tourmaster-nav-style-rect" data-type="carousel" data-column="3" data-nav="navigation" data-nav-parent="tourmaster-tour-item" data-vcenter-nav="1">
+                                        <ul class="slides">
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/royal 1.jpg" alt="" width="700" style="height:200px!important;"/>
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Brilliance of the Seas</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/star1.jpg" alt="" width="700" style="height:200px!important;" /> </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Super Star Virgo
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/royal 2.jpg" alt="" width="700" style="height:200px!important;"/>
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Jewel of the Seas</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/star 2.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Asia Pacific cruises</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="gdlr-core-item-mglr wd">
+                                                <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                    <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                        <img src="images/Home/top_Cruises/royal 3.jpg" alt="" width="700" style="height:200px!important;" />
+                                                    </div>
+                                                    <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background">
+                                                        <h3 class="tourmaster-tour-title gdlr-core-skin-title">Wonder of the Seas</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-element" style="display: flex;justify-content: center;">
+                                <div class="tp-caption rev-btn  tp-resizeme" id="slide-1-layer-4" data-x="94" data-y="center" data-voffset="200" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":1060,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(70,123,231,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[32,32,32,32]" data-paddingbottom="[20,20,20,20]" data-paddingleft="[32,32,32,32]" style="    z-index: 8;margin-top: 5%;white-space: nowrap;font-size: 13px;line-height: 12px;font-weight: 900;color: rgba(255,255,255,1);font-family: Roboto;text-transform: uppercase;background-color: rgba(70,146,231,1);border-radius: 3px 3px 3px 3px;outline: none;text-align: center;width: fit-content;box-shadow: none;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;cursor: pointer;"><a href="cruise.html" style="color:white;text-decoration: none;">View all Cruises</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="div_29f0_0" data-skin="Blue Column Service">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_1" data-parallax-speed="0"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_2">
+                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-1.png" alt="" width="49" height="49" /></div>
+                                                <div class="gdlr-core-column-service-content-wrapper">
+                                                    <div class="gdlr-core-column-service-title-wrap" id="div_29f0_3">
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Family Vacation</h3>
+                                                    </div>
+                                                    <div class="gdlr-core-column-service-content" id="div_29f0_4">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-15">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_5">
+                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-2.png" alt="" width="41" height="49" /></div>
+                                                <div class="gdlr-core-column-service-content-wrapper">
+                                                    <div class="gdlr-core-column-service-title-wrap" id="div_29f0_6">
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Couple Journey</h3>
+                                                    </div>
+                                                    <div class="gdlr-core-column-service-content" id="div_29f0_7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-15">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_8">
+                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-3.png" alt="" width="30" height="39" /></div>
+                                                <div class="gdlr-core-column-service-content-wrapper">
+                                                    <div class="gdlr-core-column-service-title-wrap" id="div_29f0_9">
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Weekend Getaway</h3>
+                                                    </div>
+                                                    <div class="gdlr-core-column-service-content" id="div_29f0_10">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="gdlr-core-pbf-wrapper " id="div_29f0_16" data-skin="Homepage Search" >
+                        <div class="gdlr-core-pbf-background-wrap">
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_177" data-parallax-speed="0"></div>
+                        </div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"  id="gdlr-core-title-item-id-88464">
+                                        <div class="gdlr-core-title-item-title-wrap" style="text-align:center;">
+                                            <h1 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_0" style="font-weight:1700;" >We proud to say!<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h1></div>
+                                    </div>
+                                </div>
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="tourmaster-tour-item clearfix  tourmaster-tour-item-style-grid tourmaster-item-pdlr tourmaster-tour-item-column-3" id="div_29f0_18">
+                                        <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 tourmaster-nav-style-rect" data-type="carousel" data-column="3" data-nav="navigation" data-nav-parent="tourmaster-tour-item" data-vcenter-nav="1">
+                                            <ul class="slides">
+                                                <li class="gdlr-core-item-mglr">
+                                                    <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                        <div class="tourmaster-tour-thumbnail tourmaster-media-image" >
+                                                            <a href="#"><img src="images/in.jpg" alt="" width="700" height="450" /></a>
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                            <p style="color:darkslategray;font-weight:400;font-size:16px;" >Approved&nbsp;by&nbsp;Ministry&nbsp;of&nbsp;Tourism<br>Goverment&nbsp;of&nbsp;India</p>
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="gdlr-core-item-mglr">
+                                                    <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                        <div class="tourmaster-tour-thumbnail tourmaster-media-image"  >
+                                                            <a href="#"><img src="images/m.jpg" alt=""  width="700" height="450" /></a>
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                             <p style="color:darkslategray;font-weight:400;font-size:16px;" >Authorized&nbsp;visa&nbsp;Agent&nbsp;<br>Malaysian&nbsp;consulate</p>
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="gdlr-core-item-mglr">
+                                                    <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title">
+                                                        <div class="tourmaster-tour-thumbnail tourmaster-media-image">
+                                                            <a href="#"><img src="images/singapore.png" alt="" width="700" height="450" /></a>
+                                                          
+                                                                
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                            <p style="color:darkslategray;font-weight:400;font-size:16px;">Authorized&nbsp;visa&nbsp;Agent&nbsp;<br>Singapore&nbsp;consulate</p> 
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="gdlr-core-item-mglr">
+                                                    <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title" style="padding-bottom: 32px;">
+                                                        <div class="tourmaster-tour-thumbnail tourmaster-media-image" >
+                                                            <a href="#"><img src="images/iata.jpg" style="background-color:white;width:700;height:400;" /></a>
+                                              
+                                                               
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                            <p style="color:darkslategray;font-weight:400;font-size:16px;">Active&nbsp;Member&nbsp;of&nbsp;IATA<br><br></p>
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="gdlr-core-item-mglr">
+                                                    <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title" style="padding-bottom: 32px;">
+                                                         <div class="tourmaster-tour-thumbnail tourmaster-media-image" >
+                                                            <a href="#"><img src="images/Tafi.png" alt="" width="700" height="450" /></a>
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                              <p style="color:darkslategray;font-weight:400;font-size:16px;">Active&nbsp;Member&nbsp;of&nbsp;TAFI<br><br></p>
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="gdlr-core-item-mglr">
+                                                     <div class="tourmaster-tour-grid tourmaster-tour-frame tourmaster-price-right-title" style="padding-bottom: 32px;">
+                                                         <div class="tourmaster-tour-thumbnail tourmaster-media-image" >
+                                                            <a href="#"><img src="images/taai.jpg" alt="" width="700" height="450" /></a>
+                                                        </div>
+                                                        <div class="tourmaster-tour-content-wrap gdlr-core-skin-e-background" style="text-align:center;background-color:#E9AA21">
+                                                               <p style="color:darkslategray;font-weight:400;font-size:16px;">Active&nbsp;Member&nbsp;of&nbsp;TAAI<br><br></p>
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                               
+                                              
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+    <!-- GOVERNMENT RECOGINITIONS -->
+    
+    <!--- OUR ACTIVE ACCREDITATIONS -->
+    <div class="gdlr-core-pbf-wrapper " id="div_29f0_45" data-skin="Blue Column Service">
+        <div class="gdlr-core-pbf-background-wrap">
+            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_29f0_46" data-parallax-speed="0"></div>
+        </div>
+        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" data-skin="Blue Icon">
+                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js  gdlr-core-column-extend-left" id="div_29f0_47" data-sync-height="column-service-height">
+                        <div class="gdlr-core-pbf-background-wrap" id="div_29f0_48"></div>
+                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" id="div_29f0_49">
+                                    <div class="gdlr-core-title-item-title-wrap">
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" id="h3_29f0_10">Why Book With Us?<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="Blue Icon">
+                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_29f0_50" data-sync-height="column-service-height">
+                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_51">
+                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-10.png" alt="" width="37" height="39" /></div>
+                                    <div class="gdlr-core-column-service-content-wrapper">
+                                        <div class="gdlr-core-column-service-title-wrap" id="div_29f0_52">
+                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">Assured best fares</h3>
+                                        </div>
+                                        <div class="gdlr-core-column-service-content" id="div_29f0_53">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="Blue Icon">
+                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_29f0_54" data-sync-height="column-service-height">
+                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_55">
+                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-11.png" alt="" width="34" height="43" /></div>
+                                    <div class="gdlr-core-column-service-content-wrapper">
+                                        <div class="gdlr-core-column-service-title-wrap" id="div_29f0_56">
+                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">One step for all travel services</h3>
+                                        </div>
+                                        <div class="gdlr-core-column-service-content" id="div_29f0_57">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="Blue Icon">
+                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_29f0_58" data-sync-height="column-service-height">
+                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-no-caption gdlr-core-item-pdlr" id="div_29f0_59">
+                                    <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src="upload/icon-12.png" alt="" width="27" height="37" /></div>
+                                    <div class="gdlr-core-column-service-content-wrapper">
+                                        <div class="gdlr-core-column-service-title-wrap" id="div_29f0_60">
+                                            <h3 class="gdlr-core-column-service-title gdlr-core-skin-title">24/7 Customer Support</h3>
+                                        </div>
+                                        <div class="gdlr-core-column-service-content" id="div_29f0_61">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({ duration: 2000, });
+    </script>
+<footer>
+        <div class="traveltour-footer-wrapper  traveltour-with-column-divider">
+            <div class="traveltour-footer-container traveltour-container clearfix">
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Government Recognitions </span></h3><span class="clear"></span>
+                    <div id="text-1" class="widget widget_text traveltour-widget">
+                        <div class="textwidget" >
+                            <img src="images/Untitled-3-01.jpg" alt="" width="100%" style="padding:10px;"/><br>
+                            <img src="images/enchantingTamilnadu.jpg" alt="" width="45%" style="padding:10px;"/>
+                            <img src="images/singporeAuthorize.webp" alt="" width="32%" style="padding:10px;"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Our Active Accreditations</span></h3><span class="clear"></span>
+                    <div id="tourmaster-widget-tour-category-6" class="widget widget_tourmaster-widget-tour-category traveltour-widget" style="display:flex;justify-content:left;flex-wrap: wrap;">
+                        
+                        <img src="images/iata.gif" alt="" width="600" height="600" style="padding:10px;width: 100px;"/>
+                        <img src="images/taai.jpg"  width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                        <img src="http://tafionline.com/Image/Logo.gif" width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                                
+                           <!--  </div> -->
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <div id="text-2" class="widget widget_text traveltour-widget">
+                        <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Contact Info</span></h3><span class="clear"></span>
+                        <div class="textwidget">
+                            <p>Address : #76(New #157),
+                                <br/> Angappa Naicken street,
+                                <br/> (Opp.to Hotel Gem Palace)Mannady,
+                                <br/>Chennai-600 001.</p>
+                            <p>
+                                <span class="gdlr-core-space-shortcode" id="span_29f0_17"></span>
+                                <br/>
+                                <a href="#"><i class="fa fa-facebook" id="i_29f0_9"></i></a> 
+                                <a href="#"><i class="fa fa-flickr" id="i_29f0_9"></i></a>
+                                <a href="#"><i class="fa fa-twitter" id="i_29f0_10"></i></a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="traveltour-copyright-wrapper">
+        <div class="traveltour-copyright-container traveltour-container" style="display:flex!important;justify-content:center!important;">
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important ">Copyrights &copy;<a href="http://www.aleeftravels.com/"> Aleef travel</a> 2019</div>
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important">Designed and Developed by<a href="https://vinteksolution.com/"> Vintek Solution</a></div>
+        </div>
+    </div>
+    <a href="#traveltour-top-anchor" class="traveltour-footer-back-to-top-button" id="traveltour-footer-back-to-top-button"><i class="fa fa-angle-up"></i></a>
+    <script type='text/javascript' src='https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/core.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <script type='text/javascript' src='plugins/tourmaster/tourmaster.js'></script>
+    <script type='text/javascript' src='js/plugins.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    function setREVStartSize(e) {
+        try {
+            e.c = jQuery(e.c);
+            var i = jQuery(window).width(),
+                t = 9999,
+                r = 0,
+                n = 0,
+                l = 0,
+                f = 0,
+                s = 0,
+                h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                    f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                var u = (e.c.width(), jQuery(window).height());
+                if (void 0 != e.fullScreenOffsetContainer) {
+                    var c = e.fullScreenOffsetContainer.split(",");
+                    if (c) jQuery.each(c, function(e, i) {
+                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                }
+                f = u
+            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({
+                height: f
+            })
+        } catch (d) {
+            console.log("Failure at Presize of Slider:" + d)
+        }
+    }; /*]]>*/
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    function revslider_showDoubleJqueryError(sliderID) {
+        var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+        errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+        errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+        errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+        errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+        jQuery(sliderID).show().html(errorMessage);
+    } /*]]>*/
+    </script>
+    <script>
+    /*<![CDATA[*/
+    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+    var htmlDivCss = "";
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (setREVStartSize !== undefined) setREVStartSize({
+        c: '#rev_slider_1_1',
+        gridwidth: [1280],
+        gridheight: [680],
+        sliderLayout: 'auto'
+    });
+    var revapi1, tpj;
+    (function() {
+        if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+        else onLoad();
+
+        function onLoad() {
+            if (tpj === undefined) {
+                tpj = jQuery;
+                if ("off" == "on") tpj.noConflict();
+            }
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "//demo.goodlayers.com/travelwp-content/plugins/revslider/public/assets/js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            touchOnDesktop: "off",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 1024,
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 50
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 50
+                            }
+                        },
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: false,
+                            style: "uranus",
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 5,
+                            v_offset: 25,
+                            space: 10,
+                            tmp: '<span class="tp-bullet-inner"></span>'
+                        }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1280,
+                    gridheight: 680,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "off",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            };
+        };
+    }()); /*]]>*/
+    </script>
+    <script>
+    /*<![CDATA[*/
+    var htmlDivCss = unescape("%23rev_slider_1_1%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_1_1%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_1_1%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
+    var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement('div');
+        htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+        document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+    </script>
+    <script>
+            $(document).ready(function(){
+             $('.gallery').flickity({
+              // options
+              cellAlign: 'left',
+              contain: true
+            });
+                $.ajax({
+                    url:"header.txt", 
+                    success: function(result){
+                        console.log(result);
+                        $("#suma").html(result);
+                    }
+                });
+                $('.close').click(function(){
+                    $('.pop-outer').fadeOut('fast');
+                });
+                $('.wd').click(function(){
+                    $('#pop-outer1').fadeIn('fast');
+                });
+                $('.fsd').click(function(){
+                    $('#pop-outer2').fadeIn('fast');
+                });
+            });
+        </script>
+        
+</body>
+
+</html>

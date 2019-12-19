@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="pingback" href="xmlrpc.php">
+    <title>Aleef Travel | Insurance </title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&amp;subset=latin%2Clatin-ext%2Cdevanagari%2Ccyrillic-ext%2Cvietnamese%2Ccyrillic%2Cgreek-ext%2Cgreek&amp;ver=4.9.8' type='text/css' media='all' />
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/tourmaster/plugins/elegant-font/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/tourmaster/tourmaster.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/tourmaster-style-custom.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/traveltour-style-custom.css' type='text/css' media='all' />
+      <link rel='stylesheet' href='css/responsive.css' type='text/css'/>
+    <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
+<style>
+
+    .bg{
+    background-image: url('images/tour1.jpg');
+    
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .bgm{
+    background-image: url('images/money.jpg');
+
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .bgv{
+    background-image: url('images/f.jpg');
+    
+  /* Full height */
+  height: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}.pop-inner {
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    margin-left: 9%;
+    margin-right: 5%;
+}
+.pop-outer{
+        background-color:rgba(0,0,0,0.5);
+        position:fixed;
+        top:0%;
+        left:0%;
+        width:100%;
+        height:100%;
+        z-index:200;
+        overflow-y: initial;
+   
+    }
+     .logoText
+    {
+    position: absolute;
+    margin-top: -4%;
+    width: 115%;
+    margin-left: -13%;
+    }
+    
+</style>
+<style>
+#more1 {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}
+</style>
+  <script>
+    $(document).ready(function(){
+         $.ajax({
+            url: "\\aleef/form.txt", 
+            success: function(result)
+            {
+                $("#formAjax").html(result);
+            }
+        });
+         $.ajax({
+            url: "\\aleef/formbutton.txt", 
+            success: function(result)
+            {
+                console.log(result);
+                $("#formAjaxbutn").html(result);
+            }
+        });
+        $('.close').click(function(){
+            $('.pop-outer').fadeOut('fast');
+        });
+         $('.wd').click(function(){
+            $('#pop-outer1').fadeIn('fast');
+        });
+        $('.fsd').click(function(){
+            $('#pop-outer2').fadeIn('fast');
+        });
+            });
+</script>
+<script>
+function myFunction1() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+function myFunction3() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+<script>
+            $(document).ready(function(){
+                $("#eform").on('submit',function(){
+                    var ob =new FormData(this);
+                    $.ajax({
+                        url:"enquiry.php",
+                        type:"post",
+                        data:ob,
+                        contentType: false,
+                        cache: false,           
+                        processData:false,
+                        success:function(datas) 
+                        {   
+                            console.log("dd");
+                            $("#eform")[0].reset();
+                            $(".close").click();
+                            alert("Thanks for your response we'll get back to you soon");
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+</head>
+ <div style="display:none;" class="pop-outer" id="pop-outer1">
+    <div class="pop-inner">
+        <button type="submit" class="close" style="margin-top:2%!important;position: absolute;right: 0;left: 85%;">X</button><br><br>
+        <h2 style="text-align:center;">Drop Us a Message</h2><br>
+		<div class="container">
+		<div class="row">
+		            <form method="post" id="eform">
+             
+               <div class="row">
+                    <div class="col-md-4"style="margin-left:10%">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+		<div class="container" style="margin-left:35%;margin-top:4%;">
+		<div class="row">
+		<div class="form-group" >
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                        </div>
+		</div>		
+		</div>
+            </form>
+		</div>
+	       	</div>
+		</div>
+    </div>
+<body class="home page-template-default page page-id-2039 gdlr-core-body tourmaster-body woocommerce-no-js traveltour-body traveltour-body-front traveltour-full  traveltour-with-sticky-navigation gdlr-core-link-to-lightbox">
+    
+     <div id="formAjax"></div>
+    <div id="formAjaxbutn"></div>
+    
+    <div class="traveltour-mobile-header-wrap">
+        <div class="traveltour-top-bar">
+            <div class="traveltour-top-bar-background"></div>
+            
+            <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                <div class="traveltour-top-bar-left traveltour-item-pdlr travel-tour-hide-on-mobile">
+                    <i class="fa fa-phone" id="i_b45c_0"></i> 044-25244179, 42161116
+                    <i class="fa fa-envelope-o" id="i_b45c_1"></i>info@aleeftravel.com
+                </div>
+                <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                    <div class="traveltour-top-bar-right-social">
+                        <a href="#" class="traveltour-top-bar-social-icon" title="facebook">
+                            <i class="fa fa-facebook" ></i>
+                        </a>
+                        <a href="#" class="traveltour-top-bar-social-icon" title="flickr">
+                            <i class="fa fa-flickr" ></i>
+                        </a>
+                        <a href="#" class="traveltour-top-bar-social-icon" title="google-plus">
+                            <i class="fa fa-google-plus" ></i>
+                        </a>
+                        <a href="#" class="traveltour-top-bar-social-icon" title="twitter">
+                            <i class="fa fa-twitter" ></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="traveltour-mobile-header traveltour-header-background traveltour-style-slide" id="traveltour-mobile-header">
+            <div class="traveltour-mobile-header-container traveltour-container">
+             <div class="traveltour-logo  traveltour-item-pdlr">
+                    <div class="traveltour-logo-inner">
+                        <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+                          
+                    </div>
+                </div>
+                <div class="traveltour-mobile-menu-right">
+                   <!-- <div class="traveltour-main-menu-search" id="traveltour-mobile-top-search"><i class="fa fa-search"></i></div>-->
+                    <div class="traveltour-top-search-wrap">
+                        <div class="traveltour-top-search-close"></div>
+                        <div class="traveltour-top-search-row">
+                        <div class="traveltour-top-search-cell">
+                                <form role="search" method="get" class="search-form" action="contact.html">
+                                    <input type="text" class="search-field traveltour-title-font" placeholder="Search..." value="" name="s">
+                                    <div class="traveltour-top-search-submit"><i class="fa fa-search"></i></div>
+                                    <input type="submit" class="search-submit" value="Search">
+                                    <div class="traveltour-top-search-close"><i class="icon_close"></i></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traveltour-mobile-menu"><a class="traveltour-mm-menu-button traveltour-mobile-menu-button traveltour-mobile-button-hamburger-with-border" href="#traveltour-mobile-menu"><i class="fa fa-bars" ></i></a>
+                        <div class="traveltour-mm-menu-wrap traveltour-navigation-font" id="traveltour-mobile-menu" data-slide="right">
+                            <ul id="menu-main-navigation" class="m-menu">
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="index.html">Home</a></li>
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="#">Services</a>
+                                 <ul class="sub-menu">
+                                        <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                                <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                                <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                                <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                                <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                                <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                                <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                                <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                                <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="about.html">About us</a></li>
+                                
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="contact.html">Contact us</a></li>
+                                
+                            </ul>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="traveltour-body-outer-wrapper ">
+        <div class="traveltour-body-wrapper clearfix  traveltour-with-transparent-header traveltour-with-frame">
+            <div class="traveltour-header-background-transparent">
+                <div class="traveltour-top-bar">
+                    <div class="traveltour-top-bar-background"></div>
+                    <div class="traveltour-top-bar-container clearfix traveltour-container ">
+                        
+                    <div class="traveltour-top-bar-left traveltour-item-pdlr">
+                        <i class="fa fa-phone" id="i_b45c_2"></i> 044-25244179, 42161116
+  
+                        <i class="fa fa-envelope-o" id="i_b45c_3"></i>info@aleeftravel.com
+                    </div>                    <div class="traveltour-top-bar-right traveltour-item-pdlr">
+                 <div style="display:none;" class="pop-outer" id="pop-outer1">
+    <div class="pop-inner">
+        <button type="submit" class="close">X</button><br><br>
+        <h2 style="text-align:center;">Drop Us a Message</h2><br>
+		<div class="container">
+		<div class="row">
+		            <form method="post" id="eform">
+             
+               <div class="row">
+                    <div class="col-md-4" style="margin-left:10%">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+		<div class="container" style="margin-left:35%;margin-top:4%;">
+		<div class="row">
+		<div class="form-group" >
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                        </div>
+		</div>		
+		</div>
+            </form>
+		</div>
+	       	</div>
+		</div>
+    </div>       
+   
+    
+    <div class="traveltour-top-bar-right-social">
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="facebook">
+                                <i class="fa fa-facebook" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="flickr">
+                                <i class="fa fa-flickr" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="google-plus">
+                                <i class="fa fa-google-plus" ></i>
+                            </a>
+                            <a href="#"  class="traveltour-top-bar-social-icon" title="twitter">
+                                <i class="fa fa-twitter" ></i>
+                            </a>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                <header class="traveltour-header-wrap traveltour-header-style-plain  traveltour-style-menu-right traveltour-sticky-navigation traveltour-style-slide">
+                    <div class="traveltour-header-background"></div>
+                    <div class="traveltour-header-container  traveltour-container">
+                       <div class="traveltour-header-container-inner clearfix">
+                            <div class="traveltour-logo  traveltour-item-pdlr">
+                                <div class="traveltour-logo-inner">
+                                    <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+                                    <a href="index.html"><img class="logo logoText" src="images/aleefLogoName.png" alt="" /></a>
+                                                                
+                                </div>
+                            </div>
+                            <div class="traveltour-navigation traveltour-item-pdlr clearfix ">
+                                <div class="traveltour-main-menu" id="traveltour-main-menu">
+                                    <ul id="menu-main-navigation-1" class="sf-menu">
+                                        <li class="menu-item traveltour-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
+                                          
+                                        <li class="menu-item current-menu-item traveltour-normal-menu"><a href="#" class="sf-with-ul-pre">Services</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="international.html">International Tour</a></li>
+                                                <li class="menu-item"><a href="domestic.html">Domestic Tour</a></li>
+                                                <li class="menu-item"><a href="pilgrimage.html">Pilgrimage Tour</a></li>
+                                                <li class="menu-item"><a href="cruise.html">Cruise Tour</a></li>
+                                                <li class="menu-item"><a href="#" class="wd">Flight Services</a></li>
+                                                <li class="menu-item"><a href="visa.html">Visa Services</a></li>
+                                                <li class="menu-item" ><a href="moneyExchange.html">Money Exchange</a></li>
+                                                <li class="menu-item" ><a href="Insurance.html">Insurance</a></li>
+                                                <li class="menu-item" ><a href="#" class="wd">Passport</a></li>
+                                            
+                                            </ul>
+                                        </li>
+					<li class="menu-item menu-item-home  menu-item-has-children traveltour-normal-menu"><a href="about.html">About us</a></li>
+                                       <li class="menu-item traveltour-normal-menu"><a href="contact.html">Contact us</a></li>
+                                    
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="traveltour-navigation-slide-bar" id="traveltour-navigation-slide-bar"></div>
+                                </div>
+                                <div class="traveltour-main-menu-right-wrap clearfix ">
+                                    <!--<div class="traveltour-main-menu-search" id="traveltour-top-search"><i class="fa fa-search"></i></div>-->
+                               <div class="traveltour-top-search-wrap">
+                                        <!--<div class="traveltour-top-search-close"></div>-->
+                                        <div class="traveltour-top-search-row">
+                                            <div class="traveltour-top-search-cell">
+                                                <form role="search" method="get" class="search-form" action="contact.html">
+                                                    <input type="text" class="search-field traveltour-title-font" placeholder="Search..." value="" name="s">
+                                                    <div class="traveltour-top-search-submit"><i class="fa fa-search"></i></div>
+                                                    <input type="submit" class="search-submit" value="Search">
+                                                    <div class="traveltour-top-search-close"><i class="icon_close"></i></div>
+                                                </form>	
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+         
+          
+    
+            <div class="traveltour-page-title-wrap  traveltour-style-medium traveltour-left-align" style="background-image: url('images/tour1.jpg')!important;">
+                <div class="traveltour-header-transparent-substitute"></div>
+                <div class="traveltour-page-title-overlay"></div>
+                <div class="traveltour-page-title-container traveltour-container">
+                    <div class="traveltour-page-title-content traveltour-item-pdlr">
+                        <h1 class="traveltour-page-title">Insurance</h1>
+                        <div class="traveltour-page-caption"></div>
+                    </div>
+                </div>
+            </div>
+          
+     
+     
+                    
+                    
+            <div class="container" style="padding:36px;font-size:18px; text-align:justify;">
+                <h3>Overseas Travel Insurance</h3>
+                <p>The joys of travel have no bounds. You get to be in a new place, explore new things and see a world different than the one you live in. At times like these, you do not expect things to go wrong. Do you? Well, you cannot control your situation and things that have to happen certainly do, including your holiday trip. Be it for business or leisure, international travel insurance is one thing that you can rely on, during an unexpected event on your foreign trip<span id="dots1">...</span></p>
+                <div id="more1">
+                <p>Ideally, you need to apply for overseas travel insurance before you plan to travel to a destination. This means that you would be covered for any unexpected events like loss of passport, missed connections, loss of baggage or a hotel emergency during your trip.</p>
+
+                    <p>So when should you apply for overseas travel insurance? If you are traveling to Europe, you will need travel insurance for a Schengen visa. This is a pre-requisite and mandatory before you apply for a visit to any of the Schengen regions.</p>
+
+                    <p>However, this is not the case for traveling to the United States of America. There is no pre-requisite for a travel insurance while applying for a visa. However, you can, and ideally should, apply for overseas travel insurance to the USA before you head out for your journey. This would cover you during your trip, and you will be able to tackle any unexpected events that may occur.</p>
+
+                    <p>The same is also applicable for travel to the United Kingdom. You will not be asked for travel insurance during your visa interview. However, you should buy international travel insurance, incase of an emergency during your holiday costing a lot of money. Your travel insurance to the UK should also cover trip cancellation or interruption, Hijack Distress Allowance and home-burglary, among other aspects.</p>
+
+                    <p>Some travel insurance to Canada can also cover pre-existing ailments, however, it is subject to medical tests. Also, if you are buying travel insurance in India, make sure the policy covers medical costs in Canada. Make sure you buy this before you leave for your holiday as there will be a waiting period for the travel insurance to be issued.</p>
+
+                    <p>Worries should not mar your holiday. After all, it&#39;s best to be prepared always</p>
+                </div>
+                <p style="text-align:left">
+                <button onclick="myFunction1()" id="myBtn1" style="padding:10px;color:white;background-color:rgb(70, 146, 231);border-radius:7px;">Read more</button>
+                </p>
+            </div>
+            
+            <div class="container" style="padding:36px;font-size:18px; text-align:justify;">
+                <h3>Asia Travel Insurance</h3>
+                <p>Traveling to a new country is something we all aspire for. Be it exploring the ancient temples of Cambodia, scuba diving in the Maldives, skiing in the Alps or just exploring the amazing attractions of New York. We plan to see the best of the place we wish to visit, travel insurance is an equally important step in planning your international trip, be it for any purpose, business or leisure<span id="dots2">...</span></p>
+                <div id="more2">
+                <p>You must have come across people who tell you that travel insurance is only essential if you are traveling far. However, this is not advisable as travel insurance to any country is just as important. It is always advisable to opt for region-specific insurance. If you are planning a trip to any of the Asian countries, then backing is an essential component.</p>
+
+                <p>An insurance plan is specifically for people who are traveling to any Asian country for vacation or business. It is advisable to buy a good plan before embarking on a trip to any of the countries in Asia that covers the following Asian countries like Bahrain, Bangladesh, Bhutan, Brunei, Burma (Myanmar), Cambodia, China, Hong Kong, Indonesia, Iran, Iraq, Jordan, Kuwait, Lebanon, Malaysia, Mongolia, Nepal, Oman, Pakistan, Philippines, Qatar, Saudi Arabia, Singapore, Sri Lanka, Taiwan, Thailand, UAE, Vietnam, Yemen.</p>
+
+                <p>Make sure your policy covers expenses like medical emergencies, injury or illnesses. If you are planning for a family holiday trip or friend’s holiday trip, then every fellow traveler has to be insured individually.</p>
+
+                <p>This would ideally cover the loss of passport and the expenses incurred for obtaining a fresh or a duplicate passport. Loss of baggage is another important component to be covered by insurance. Correspondingly, the total loss of baggage expenses is taken into account.</p>
+
+                <p>If the trip is delayed by more than 12 hours due to some issues with airlines or natural disasters or due to a medical emergency, then that also should be covered. Special distress allowance is also provided in case of any emergency situations. It is always advisable to study the benefits and compare before you select your package.</p>
+
+                <p>For a trip to Malaysia, the scheme should cover any personal accident that you may be involved in, along with a financial emergency where you require funds due to theft. If you believe that you do not require travel insurance for a short trip to any destination in Asia, you are wrong. The idea of a holiday is to be stress-free no matter where. So why take a chance?</p>
+                </div>
+                <p style="text-align:left">
+                <button onclick="myFunction2()" id="myBtn2" style="padding:10px;color:white;background-color:rgb(70, 146, 231);border-radius:7px;">Read more</button>
+                </p>
+            </div>
+            
+            
+            <div class="container" style="padding:36px;font-size:18px; text-align:justify;">
+                <h3>Senior Citizen Travel Insurance</h3>
+                <p>Traveling is fun. This may sound like an understatement, but you know what we mean. This is your time to be carefree, to be out and about exploring and just finding new places to be. However, there can be some situations that can dampen your holiday spirit. Imagine falling sick and needing medical attention. Everyone knows that medical costs in another country could hit the roof. While you may have planned for certain contingencies, medical emergency costs can occur at any given time. One thing that can always help you at times like these is medical insurance<span id="dots3">...</span></p>
+                <div id="more3">
+                    <p>The best policy safeguards you from financial losses and the unforeseen problems that you may encounter during a trip. Selecting the right policy is one of the key factors. Here’s what you need to keep in mind when you take insurance:</p>
+                    <p>More Coverage: Depending on which country you are traveling, select your international travel insurance policy, which covers the cost of healthcare treatment overseas, the risk of losing your passport, theft of valuables, etc. You can buy travel insurance online that would safeguard keeping your belongings secure to prevent flight interruptions or cancellations, etc. during your trip.</p>
+
+                    <p>Frequent Flyer’s Delight: For the regular, frequent fliers, who need to travel overseas multiple times in a year, opting for a Multi-Trip Travel Insurance is a better bet. This is the best travel insurance for frequent flyers as it covers expenses of multiple trips within the year and saves individuals from paying multiple insurance expenses. It is also convenient, as you do not have to buy a fresh policy before every trip. Depending on the insurance provider, each of these categories is further classified into Gold, Silver, Platinum, etc. based on the premium rates and coverage.</p>
+
+                    <p>Destination Insurance: Consider a few important factors before you select a travel insurance policy, like country, age, and activity at the destination. The country you are traveling to, the risk and cost factors associated with it, etc. will help you identify the plan that is best suited for you. Travel insurance to Asian countries is less expensive than European and American countries. The policy amount varies on factors like distance, risk factors, medical expenses of that country and such other parameters. You can check for travel insurance online that will cater to your travel needs.</p>
+
+                    <p>Activity Insurance: The insurance cover depends on your activity at the destination. If you are visiting for entertainment activities like sightseeing or shopping, the regular international travel insurance plan is sufficient. However, if you are planning on adventure activities, you will need to enhance your travel insurance cover with an added cost, since these are not included in the regular travel policy.</p>
+
+                    <p>For Everyone: Travel insurance in India is available for all age groups. Senior citizen plans include greater cover for diseases and hospitalization. Certain policies also safeguard your home back in India, while you are traveling, or offer assistance to your family at home, etc. at a higher premium. This is when you break the stress of everyday life. Why not ensure your travel so you could leave the stress behind!</p>
+                    <p>Services make your travel smooth with us: We offer a wide range of services to smoothen your moments. Its time to look at Forex and Visa services formalities if you have insured yourself.</p>
+                </div>
+                <p style="text-align:left">
+                <button onclick="myFunction3()" id="myBtn3" style="padding:10px;color:white;background-color:rgb(70, 146, 231);border-radius:7px;">Read more</button>
+                </p>
+            </div>
+            <div class="container" style="padding:36px;font-size:18px; text-align:justify;">
+                <h3>Student Travel Insurance</h3>
+                <p>Voyaging is entertaining. This may seem like a modest representation of the truth, however, you comprehend what we mean. This is your opportunity to be lighthearted, to be out on the town investigating and simply seeing new places as. Nonetheless, there can be a few circumstances that can hose your vacation soul. Envision falling wiped out and requiring medicinal consideration. Everybody realizes that therapeutic expenses in another nation could hit the rooftop. While you may have made arrangements for specific possibilities, health-related crisis expenses can happen at some random time. One thing that can generally help you now and again like these is a movement medicinal protection<span id="dots4">...</span></p>
+                <div id="more4">
+                   <p>The best travel protection arrangement shields you from the money related misfortunes and the unanticipated issues that you may experience during an excursion. Choosing the correct arrangement is one of the key elements. This is what you have to remember when you take protection:</p>
+
+                <p>More Coverage: Depending on which nation you are voyaging, select your worldwide travel protection approach, which takes care of the expense of social insurance treatment abroad, the danger of losing your visa, burglary
+                    of assets, and so forth. You can purchase travel protection online that would defend you from misfortunes against sudden consumptions, for example, restorative treatment, loss of stuff, loss of identification, flight interferences or undoings, and so on during your outing.</p>
+
+                <p>Long-standing customer&#39;s Delight: For the standard, visit fliers, who need to travel abroad on various occasions in a year, settling on a Multi-Trip Travel Insurance is a superior wagered. This is the best travel protection for long-standing customers as it covers the costs of numerous outings inside the year and spares people from paying various protection costs. It is additionally advantageous, as you don&#39;t need to purchase a new approach before each outing. Contingent upon the protection supplier, every one of these classifications is additionally grouped into Gold, Silver, Platinum, and so on depending on the exceptional rates and inclusion.</p>
+
+                <p>Goal Insurance: Consider a couple of significant factors before you select a movement protection strategy, similar to nation, age, and action at the goal. The nation you are venturing out to, the hazard and cost factors related to it, and so forth will assist you with recognizing the arrangement that is most appropriate for you. Travel protection to Asian nations is more affordable than European and American nations. The arrangement sum differs on factors like separation, hazard factors, restorative costs of that nation and such different parameters. You can check for movement protection online that will oblige your movement needs.</p>
+
+                <p>Action Insurance: The protection spread relies upon your movement at the goal. In the event that you are visiting for stimulation exercises like touring or shopping, the normal universal travel protection plan is adequate. In any case, on the off chance that you are anticipating experience exercises, you should upgrade your movement protection spread with an additional expense, since these are excluded from the normal travel approach.</p>
+
+                <p>For Everyone: Travel protection in India is accessible for all age gatherings. Senior resident plans incorporate more prominent spread for ailments and hospitalization. Certain arrangements likewise protect your home back in India, while you are voyaging, or offer help to your family at home, and so on at a higher premium. This is the point at which you break the pressure of regular day to day existence. Why not guarantee your movement so you could abandon the pressure!</p>
+
+                <p>Different administrations to make your movement smooth with us: We offer a wide scope of administrations to smoothen your movement. It&#39;s an opportunity to take a gander at Forex and Visa administration customs on the off chance that you have protected yourself.</p>
+                </div>
+                <p style="text-align:left">
+                <button onclick="myFunction4()" id="myBtn4" style="padding:10px;color:white;background-color:rgb(70, 146, 231);border-radius:7px;">Read more</button>
+                </p>
+            </div>
+            
+       
+
+<footer>
+        <div class="traveltour-footer-wrapper  traveltour-with-column-divider">
+            <div class="traveltour-footer-container traveltour-container clearfix">
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Government Recognitions </span></h3><span class="clear"></span>
+                    <div id="text-1" class="widget widget_text traveltour-widget">
+                        <div class="textwidget" >
+                            <img src="images/Untitled-3-01.jpg" alt="" width="100%" style="padding:10px;"/><br>
+                            <img src="images/enchantingTamilnadu.jpg" alt="" width="45%" style="padding:10px;"/>
+                            <img src="images/singporeAuthorize.webp" alt="" width="32%" style="padding:10px;"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Our Active Accreditations</span></h3><span class="clear"></span>
+                    <div id="tourmaster-widget-tour-category-6" class="widget widget_tourmaster-widget-tour-category traveltour-widget" style="display:flex;justify-content:left;flex-wrap: wrap;">
+                        
+                        <img src="images/iata.gif" alt="" width="600" height="600" style="padding:10px;width: 100px;"/>
+                        <img src="images/taai.jpg"  width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                        <img src="http://tafionline.com/Image/Logo.gif" width="600" height="600" alt="TAAI logo" style="padding:10px;width: 100px;"/>
+                                
+                           <!--  </div> -->
+                    </div>
+                </div>
+                <div class="traveltour-footer-column traveltour-item-pdlr traveltour-column-20">
+                    <div id="text-2" class="widget widget_text traveltour-widget">
+                        <h3 class="traveltour-widget-title"><span class="traveltour-widget-head-text">Contact Info</span></h3><span class="clear"></span>
+                        <div class="textwidget">
+                            <p>Address : #76(New #157),
+                                <br/> Angappa Naicken street,
+                                <br/> (Opp.of Hotel Gem Palace)Mannady,
+                                <br/>Chennai-600 001.</p>
+                            <p>
+                                <span class="gdlr-core-space-shortcode" id="span_29f0_17"></span>
+                                <br/>
+                                <a href="#"><i class="fa fa-facebook" id="i_29f0_9"></i></a> 
+                                <a href="#"><i class="fa fa-flickr" id="i_29f0_9"></i></a>
+                                <a href="#"><i class="fa fa-twitter" id="i_29f0_10"></i></a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="traveltour-copyright-wrapper">
+        <div class="traveltour-copyright-container traveltour-container" style="display:flex!important;justify-content:center!important;">
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important ">Copyrights &copy;<a href="http://www.aleeftravels.com/"> Aleef travel</a> 2019</div>
+            <div class="traveltour-copyright-text traveltour-item-pdlr" style="justify-content:center!important">Designed and Developed by<a href="https://vinteksolution.com/"> Vintek Solution</a></div>
+        </div>
+    </div>
+    </div><a href="#traveltour-top-anchor" class="traveltour-footer-back-to-top-button" id="traveltour-footer-back-to-top-button"><i class="fa fa-angle-up" ></i></a>
+
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/core.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <script type='text/javascript' src='plugins/tourmaster/tourmaster.js'></script>
+    <script type='text/javascript' src='js/plugins.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+
+    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+
+
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>  
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script> 
+    <script type="text/javascript" src="plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script> 
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        function setREVStartSize(e) {
+            try {
+                e.c = jQuery(e.c);
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function(e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        }; /*]]>*/
+    </script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        function revslider_showDoubleJqueryError(sliderID) {
+            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+            jQuery(sliderID).show().html(errorMessage);
+        } /*]]>*/
+    </script>
+    <script>
+        /*<![CDATA[*/
+        var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+        var htmlDivCss = "";
+        if (htmlDiv) {
+            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+        } else {
+            var htmlDiv = document.createElement("div");
+            htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+            document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+        } /*]]>*/
+    </script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        if (setREVStartSize !== undefined) setREVStartSize({
+            c: '#rev_slider_1_1',
+            gridwidth: [1280],
+            gridheight: [680],
+            sliderLayout: 'auto'
+        });
+        var revapi1, tpj;
+        (function() {
+            if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+            else onLoad();
+
+            function onLoad() {
+                if (tpj === undefined) {
+                    tpj = jQuery;
+                    if ("off" == "on") tpj.noConflict();
+                }
+                if (tpj("#rev_slider_1_1").revolution == undefined) {
+                    revslider_showDoubleJqueryError("#rev_slider_1_1");
+                } else {
+                    revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                        sliderType: "standard",
+                        jsFileLocation: "//demo.goodlayers.com/travelwp-content/plugins/revslider/public/assets/js/",
+                        sliderLayout: "auto",
+                        dottedOverlay: "none",
+                        delay: 9000,
+                        navigation: {
+                            keyboardNavigation: "off",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation: "off",
+                            mouseScrollReverse: "default",
+                            onHoverStop: "off",
+                            touch: {
+                                touchenabled: "on",
+                                touchOnDesktop: "off",
+                                swipe_threshold: 75,
+                                swipe_min_touches: 1,
+                                swipe_direction: "horizontal",
+                                drag_block_vertical: false
+                            },
+                            arrows: {
+                                style: "uranus",
+                                enable: true,
+                                hide_onmobile: true,
+                                hide_under: 1024,
+                                hide_onleave: true,
+                                hide_delay: 200,
+                                hide_delay_mobile: 1200,
+                                tmp: '',
+                                left: {
+                                    h_align: "left",
+                                    v_align: "center",
+                                    h_offset: 20,
+                                    v_offset: 50
+                                },
+                                right: {
+                                    h_align: "right",
+                                    v_align: "center",
+                                    h_offset: 20,
+                                    v_offset: 50
+                                }
+                            },
+                            bullets: {
+                                enable: true,
+                                hide_onmobile: false,
+                                style: "uranus",
+                                hide_onleave: false,
+                                direction: "horizontal",
+                                h_align: "center",
+                                v_align: "bottom",
+                                h_offset: 5,
+                                v_offset: 25,
+                                space: 10,
+                                tmp: '<span class="tp-bullet-inner"></span>'
+                            }
+                        },
+                        visibilityLevels: [1240, 1024, 778, 480],
+                        gridwidth: 1280,
+                        gridheight: 680,
+                        lazyType: "none",
+                        shadow: 0,
+                        spinner: "off",
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        shuffle: "off",
+                        autoHeight: "off",
+                        disableProgressBar: "on",
+                        hideThumbsOnMobile: "off",
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        debugMode: false,
+                        fallbacks: {
+                            simplifyAll: "off",
+                            nextSlideOnWindowFocus: "off",
+                            disableFocusListener: false,
+                        }
+                    });
+                };
+            };
+        }()); /*]]>*/
+    </script>
+    <script>
+        /*<![CDATA[*/
+        var htmlDivCss = unescape("%23rev_slider_1_1%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_1_1%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_1_1%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
+        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+        if (htmlDiv) {
+            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+        } else {
+            var htmlDiv = document.createElement('div');
+            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+        } /*]]>*/
+    </script>
+
+</body>
+</html>
